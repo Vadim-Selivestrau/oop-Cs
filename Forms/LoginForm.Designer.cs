@@ -41,7 +41,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.loginField = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.passwordInvisiblebutton)).BeginInit();
@@ -80,7 +79,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.checkBox1);
             this.panel2.Controls.Add(this.registrationLabel);
             this.panel2.Controls.Add(this.passwordInvisiblebutton);
             this.panel2.Controls.Add(this.passwordVisibleButton);
@@ -175,16 +173,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(767, 123);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,7 +212,6 @@
         private System.Windows.Forms.PictureBox passwordInvisiblebutton;
         private System.Windows.Forms.PictureBox passwordVisibleButton;
         private System.Windows.Forms.LinkLabel registrationLabel;
-        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

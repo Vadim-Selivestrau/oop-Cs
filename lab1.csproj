@@ -46,11 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\BankAccount.cs" />
-    <Compile Include="Entities\Citizenship.cs" />
-    <Compile Include="Entities\ConnectData.cs" />
-    <Compile Include="Entities\PassportData.cs" />
-    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\Banks\BankAccount.cs" />
+    <Compile Include="Entities\Banks\Bill.cs" />
+    <Compile Include="Entities\Users\Citizenship.cs" />
+    <Compile Include="Entities\Users\Client.cs" />
+    <Compile Include="Entities\Users\ConnectData.cs" />
+    <Compile Include="Entities\Users\PassportData.cs" />
+    <Compile Include="Entities\Users\User.cs" />
     <Compile Include="Forms\ClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
