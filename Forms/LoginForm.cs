@@ -8,61 +8,54 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace lab1
+namespace Laba1
 {
     public partial class LoginForm : Form
     {
+        AppContext db = new AppContext();
+        private LoginPresenter lp;
         public LoginForm()
         {
             InitializeComponent();
-            passwordInvisiblebutton.Visible = false;
+            lp = new LoginPresenter(this, new LoginModel());
         }
 
-
-       
-
-        private void passwordField_Load(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
-            loginField.MaxLength = 15;
-            passwordField.MaxLength = 20;
-        }
-
-        private void loginButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void loginField_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void passwordVisibleButton_Click(object sender, EventArgs e)
-        {
-            passwordField.UseSystemPasswordChar = false;
-            passwordInvisiblebutton.Visible = true;
-            passwordVisibleButton.Visible = false;
-        }
-
-        private void passwordInvisiblebutton_Click(object sender, EventArgs e)
-        {
-            passwordField.UseSystemPasswordChar = true;
-            passwordInvisiblebutton.Visible = false;
-            passwordVisibleButton.Visible = true;
-        }
-
-        private void registrationLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            SignUpForm signUpForm = new SignUpForm();
+            SignUp signUpForm = new SignUp();
             Hide();
             signUpForm.ShowDialog();
-            
         }
 
-        private void closeLabel_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string login = nameTextBox.Text;
+            string password = passwordTextBox.Text;
+            if (nameTextBox.Text.Trim() == string.Empty)
+            {
+                nameTextBox.BackColor = System.Drawing.Color.Red;
+            }
+            else if (passwordTextBox.Text.Trim() == string.Empty)
+            {
+                passwordTextBox.BackColor = System.Drawing.Color.Red;
+                passwordTextBox.Text = string.Empty;
+            }
+            else
+            {
+                Hide();
+                lp.ValidEnter(nameTextBox.Text.Trim(), passwordTextBox.Text.Trim());
+            }
+        }
+
+
+        public void Continue(Form form)
+        {
+            form.Show();
         }
     }
 }
